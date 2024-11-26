@@ -4,7 +4,7 @@ services:
   # Frontend service
   frontend:
     build:
-      context: ./library-management-frontend  # Path to the frontend directory
+      context: ./Frontend  # Path to the frontend directory
     ports:
       - "3000:80"  # Map port 80 of the container to port 80 on the host
     depends_on:
