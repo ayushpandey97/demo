@@ -15,7 +15,7 @@ services:
   # Backend service
   backend:
     build:
-      context: ./librarymanagement/librarymanagement  # Path to the backend directory
+      context: ./librarymanagement  # Path to the backend directory
     environment:
       DB_HOST: db
       DB_PORT: 3306
