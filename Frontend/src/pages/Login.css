@@ -1,0 +1,51 @@
+/* Login.css */
+
+.login-container {
+    max-width: 400px; /* Set a max width for the container */
+    margin: 50px auto; /* Center the container */
+    padding: 20px; /* Add padding */
+    background-color: #f8f9fa; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  h2 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    color: #333; /* Darker text color */
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%; /* Full width */
+    padding: 10px; /* Add padding */
+    margin-bottom: 15px; /* Space between inputs */
+    border: 1px solid #ced4da; /* Border color */
+    border-radius: 4px; /* Rounded corners */
+  }
+  
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    border-color: #80bdff; /* Focus border color */
+    outline: none; /* Remove outline */
+  }
+  
+  button {
+    width: 100%; /* Full width */
+    padding: 10px; /* Add padding */
+    background-color: #007bff; /* Bootstrap primary color */
+    color: rgb(243, 5, 5); /* White text */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 16px; /* Font size */
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  button:focus {
+    outline: none; /* Remove outline on focus */
+  }
+  
