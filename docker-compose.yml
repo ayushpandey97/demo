@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  # Frontend service
+  frontend:
+    build:
+      context: ./library-management-frontend  # Path to the frontend directory
+    ports:
+      - "3000:80"  # Map port 80 of the container to port 80 on the host
+    depends_on:
+      - backend  # Ensure backend starts first
+    networks:
+      - app-network
+
+  # Backend service
+  backend:
+    build:
+      context: ./librarymanagement/librarymanagement  # Path to the backend directory
+    environment:
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_NAME: testdb
+      DB_USERNAME: root
+      DB_PASSWORD: password
+    depends_on:
+      - db
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network
+
+  # MySQL database service
+  db:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: testdb
+    ports:
+      - "3306:3306"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
