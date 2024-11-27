@@ -19,6 +19,12 @@ jobs:
       with:
         ssh-private-key: ${{ secrets.EC2_SSH_KEY }}
 
+    - name: Print current directory
+      run: pwd
+    - name: List contents of directory
+      run: ls -la
+
+
     - name: Copy files to EC2
       run: |
         scp -v -o StrictHostKeyChecking=no -r . ec2-user@${{ secrets.EC2_HOST }}:/home/ec2-user/app
