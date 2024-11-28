@@ -6,7 +6,7 @@ const DeleteBook = () => {
 
   const handleDeleteBook = async () => {
     try {
-      const response = await axios.delete(`http://localhost:8080/librarian/deleteBook/${bookId}`);
+      const response = await axios.delete(`http://3.27.162.178:8080/librarian/deleteBook/${bookId}`);
       alert(response.data);  // Display the response message
       // Clear form field
       setBookId('');

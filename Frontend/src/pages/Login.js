@@ -13,7 +13,7 @@ const Login = () => {
     setError('');
 
     try {
-      const response = await axios.post('http://localhost:8080/login', { username, password });
+      const response = await axios.post('http://3.27.162.178:8080/login', { username, password });
       if (response.data === 'user') {
         navigate('/user'); // Redirect to user page
       } else if (response.data === 'librarian') {

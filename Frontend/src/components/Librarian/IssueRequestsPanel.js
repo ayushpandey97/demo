@@ -7,7 +7,7 @@ const IssueRequestsPanel = () => {
   useEffect(() => {
     const fetchRequests = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/librarian/issueRequests');
+        const response = await axios.get('http://3.27.162.178:8080/librarian/issueRequests');
         setRequests(response.data);
       } catch (error) {
         console.error('Error fetching issue requests:', error);
@@ -18,7 +18,7 @@ const IssueRequestsPanel = () => {
 
   const approveRequest = async (bookId, userId) => {
     try {
-      const response = await axios.post(`http://localhost:8080/librarian/approveBorrow/${bookId}/${userId}`);
+      const response = await axios.post(`http://3.27.162.178:8080/librarian/approveBorrow/${bookId}/${userId}`);
       alert(response.data);
 
       // Immediately remove the approved request from the UI

@@ -6,7 +6,7 @@ const ReturnRequest = () => {
 
   const issueReturnRequest = async () => {
     try {
-      const response = await axios.post(`http://localhost:8080/user/requestReturn/${borrowedBookId}`);
+      const response = await axios.post(`http://3.27.162.178:8080/user/requestReturn/${borrowedBookId}`);
       alert(response.data); // Show response message to user
     } catch (error) {
       console.error('Error submitting return request:', error);

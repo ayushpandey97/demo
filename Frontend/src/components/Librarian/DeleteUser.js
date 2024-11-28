@@ -6,7 +6,7 @@ const DeleteUser = () => {
 
   const handleDeleteUser = async () => {
     try {
-      const response = await axios.delete(`http://localhost:8080/librarian/deleteUser/${userId}`);
+      const response = await axios.delete(`http://3.27.162.178:8080/librarian/deleteUser/${userId}`);
       alert(response.data);  // "User deleted successfully."
       // Clear form field
       setUserId('');

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+//const API_URL = "http://3.27.162.178:8080";
 
 const AddBook = () => {
   const [title, setTitle] = useState('');
@@ -14,7 +15,7 @@ const AddBook = () => {
     };
 
     try {
-      const response = await axios.post('http://localhost:8080/librarian/addBook', bookData);
+      const response = await axios.post('http://3.27.162.178:8080/librarian/addBook', bookData);
       alert('Book added successfully');
       // Clear form fields
       setTitle('');

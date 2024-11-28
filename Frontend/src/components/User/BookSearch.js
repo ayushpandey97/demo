@@ -7,7 +7,7 @@ const BookSearch = () => {
 
   const searchBooks = async () => {
     try {
-      const response = await axios.get(`http://localhost:8080/user/searchBooks?query=${searchTerm}`);
+      const response = await axios.get(`http://3.27.162.178:8080/user/searchBooks?query=${searchTerm}`);
       setBooks(response.data);
     } catch (error) {
       console.error('Error fetching books:', error);

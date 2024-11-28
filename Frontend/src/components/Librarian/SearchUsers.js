@@ -7,7 +7,7 @@ const SearchUsers = () => {
 
   const handleSearchUser = async () => {
     try {
-      const response = await axios.get(`http://localhost:8080/librarian/searchUsers/${username}`);
+      const response = await axios.get(`http://3.27.162.178:8080/librarian/searchUsers/${username}`);
       setUser(response.data); // Store the user details
     } catch (error) {
       console.error('Error searching for users:', error.response ? error.response.data : error.message);

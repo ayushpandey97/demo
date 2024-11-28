@@ -7,7 +7,7 @@ const SearchBooks = () => {
 
   const handleSearchBooks = async () => {
     try {
-      const response = await axios.get(`http://localhost:8080/librarian/searchBooks/${query}`);
+      const response = await axios.get(`http://3.27.162.178:8080/librarian/searchBooks/${query}`);
       setBooks(response.data); // Store the list of books found
     } catch (error) {
       console.error('Error searching for books:', error.response ? error.response.data : error.message);

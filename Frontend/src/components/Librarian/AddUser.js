@@ -12,7 +12,7 @@ const AddUser = () => {
     };
 
     try {
-      const response = await axios.post('http://localhost:8080/librarian/addUser', userData);
+      const response = await axios.post('http://3.27.162.178:8080/librarian/addUser', userData);
       alert(response.data); // "User added successfully."
       // Clear form fields
       setUsername('');

@@ -7,7 +7,7 @@ const BorrowRequest = () => {
 
   const issueBorrowRequest = async () => {
     try {
-      const response = await axios.post(`http://localhost:8080/user/requestBorrow/${bookId}/${userId}`);
+      const response = await axios.post(`http://3.27.162.178:8080/user/requestBorrow/${bookId}/${userId}`);
       alert(response.data); // Show response message to user
     } catch (error) {
       console.error('Error submitting borrow request:', error);

@@ -10,7 +10,7 @@ const ReturnRequestsPanel = () => {
 
   const fetchRequests = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/librarian/returnRequests');
+      const response = await axios.get('http://3.27.162.178:8080/librarian/returnRequests');
       console.log('API Response:', response.data); // Log the response
       setRequests(response.data);
     } catch (error) {
@@ -20,7 +20,7 @@ const ReturnRequestsPanel = () => {
 
   const approveReturn = async (borrowedBookId) => {
     try {
-      const response = await axios.post(`http://localhost:8080/librarian/approveReturn/${borrowedBookId}`);
+      const response = await axios.post(`http://3.27.162.178:8080/librarian/approveReturn/${borrowedBookId}`);
       alert(response.data); // Display success message
       fetchRequests(); // Refresh the list of requests after approval
     } catch (error) {

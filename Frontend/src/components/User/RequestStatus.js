@@ -11,7 +11,7 @@ const RequestStatus = () => {
     setLoading(true);
     setError('');
     try {
-      const response = await axios.get(`http://localhost:8080/user/status/${userId}`);
+      const response = await axios.get(`http://3.27.162.178:8080/user/status/${userId}`);
       console.log('API Response:', response.data);
       setStatus(response.data);
     } catch (error) {

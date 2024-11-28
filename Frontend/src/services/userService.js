@@ -1,7 +1,7 @@
 // services/userService.js
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:8080';
+const BASE_URL = 'http://3.27.162.178:8080';
 
 const userService = {
   searchUsers: async (username) => {
