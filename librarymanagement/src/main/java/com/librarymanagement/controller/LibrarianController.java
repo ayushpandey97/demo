@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://3.27.162.178:3000")
 @RequestMapping("/librarian")
 public class LibrarianController {
 

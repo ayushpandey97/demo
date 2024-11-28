@@ -11,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/login")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://3.27.162.178:3000")
 public class LoginController {
 
     @Autowired
